@@ -1,1 +1,22 @@
-displaying clock
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display clock</title>
+	<script type="text/javascript">
+		function showClock(){
+			var time=new Date()
+			var h =time.getHours();
+			var m =time.getMinutes();
+			var s =time.getSeconds();
+			document.getElementById("time").innerHTML=h+":"+m+":"+s+" ";
+			t=setTimeout("showClock(),1000");
+		}
+	</script>
+</head>
+<body onload =showClock()>
+	<div id ="time">
+		
+	</div>
+
+</body>
+</html>
